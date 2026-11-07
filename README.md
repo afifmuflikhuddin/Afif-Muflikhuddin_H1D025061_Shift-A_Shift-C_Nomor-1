@@ -23,10 +23,10 @@ Pemain melawan tiga monster secara berurutan: Goblin, Slime, lalu boss Naga Api.
 | 5 | Kabur |
 
 Aturan singkat:
-- Monster mengamuk (attack naik) saat HP-nya 30 atau kurang.
-- Boss menyemburkan api setiap 3 giliran.
-- Potion tidak memakan giliran jika HP masih penuh atau stok habis.
-- Pemain naik level setelah EXP mencapai 100.
+1. Monster mengamuk (attack naik) saat HP-nya 30 atau kurang.
+2. Boss menyemburkan api setiap 3 giliran.
+3. Potion tidak memakan giliran jika HP masih penuh atau stok habis.
+4. Pemain naik level setelah EXP mencapai 100.
 
 ## Struktur Class
 | File | Keterangan |
