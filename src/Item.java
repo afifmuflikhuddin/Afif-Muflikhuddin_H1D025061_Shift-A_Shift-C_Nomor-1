@@ -25,7 +25,6 @@ public class Item {
     public void setJumlah(int jumlah) {
         this.jumlah = Math.max(0, jumlah);
     }
-
     public boolean gunakan(Pemain pemain) {
         if (jumlah <= 0) {
             System.out.println(namaItem + " sudah habis!");
