@@ -1,0 +1,8 @@
+# Hasil kompilasi
+out/
+*.class
+
+# File otomatis IDE
+.idea/
+*.iml
+.vscode/
