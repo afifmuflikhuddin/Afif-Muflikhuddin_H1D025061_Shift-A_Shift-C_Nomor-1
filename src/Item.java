@@ -2,13 +2,11 @@ public class Item {
     private String namaItem;
     private int pemulihan;
     private int jumlah;
-
     public Item(String namaItem, int pemulihan, int jumlah) {
         this.namaItem = namaItem;
         this.pemulihan = pemulihan;
         setJumlah(jumlah);
     }
-
     public String getNamaItem() {
         return namaItem;
     }
