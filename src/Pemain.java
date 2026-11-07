@@ -1,19 +1,13 @@
 public class Pemain extends Karakter implements BisaBertarung, BisaMenggunakanItem {
-
-    // Konstanta (menggantikan angka 50 dan 100 yang sebelumnya tertulis langsung)
     public static final int MAX_STAMINA = 50;
     public static final int EXP_LEVEL_UP = 100;
     private int level;
     private int exp;
     private int gold;
     private int stamina;
-
-    // Constructor pertama
     public Pemain(String id, String nama) {
         this(id, nama, 100, 20);
     }
-
-    // Constructor kedua (overloading)
     public Pemain(String id, String nama, int hp, int attack) {
         super(id, nama, hp, attack);
         this.level = 1;
@@ -21,8 +15,6 @@ public class Pemain extends Karakter implements BisaBertarung, BisaMenggunakanIt
         this.gold = 50;
         this.stamina = MAX_STAMINA;
     }
-
-    // Getter dan setter
     public int getLevel() {
         return level;
     }
@@ -53,14 +45,10 @@ public class Pemain extends Karakter implements BisaBertarung, BisaMenggunakanIt
             this.stamina = stamina;
         }
     }
-
-    // Implementasi interface BisaBertarung
     @Override
     public void bertarung(Karakter target) {
         serang(target);
     }
-
-    // Implementasi interface BisaMenggunakanItem
     @Override
     public boolean gunakanItem(Item item) {
         if (item != null && isHidup()) {
@@ -70,16 +58,12 @@ public class Pemain extends Karakter implements BisaBertarung, BisaMenggunakanIt
             return false;
         }
     }
-
-    // Method overriding
     @Override
     public void serang(Karakter target) {
         System.out.println(getNama() + " menyerang " + target.getNama() + "!");
         super.serang(target);
         System.out.println("Damage: " + getAttack());
     }
-
-    // Implementasi abstract method
     @Override
     public void aksiKhusus(Karakter target) {
         if (stamina >= 20 && isHidup() && target.isHidup()) {
@@ -94,8 +78,6 @@ public class Pemain extends Karakter implements BisaBertarung, BisaMenggunakanIt
             System.out.println("Stamina dipulihkan 10 poin.");
         }
     }
-
-    // Menambahkan EXP dan gold
     public void dapatHadiah(int exp, int gold) {
         this.exp += exp;
         this.gold += gold;
@@ -110,8 +92,6 @@ public class Pemain extends Karakter implements BisaBertarung, BisaMenggunakanIt
             System.out.println("Level sekarang: " + level);
         }
     }
-
-    // Overriding tampilkanInfo
     @Override
     public void tampilkanInfo() {
         super.tampilkanInfo();

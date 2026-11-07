@@ -9,7 +9,6 @@ public class Item {
         setJumlah(jumlah);
     }
 
-    // Getter dan setter
     public String getNamaItem() {
         return namaItem;
     }
@@ -29,7 +28,6 @@ public class Item {
         this.jumlah = Math.max(0, jumlah);
     }
 
-    // Menggunakan item (true jika berhasil dipakai)
     public boolean gunakan(Pemain pemain) {
         if (jumlah <= 0) {
             System.out.println(namaItem + " sudah habis!");
